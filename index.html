@@ -4,173 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <!-- Google Fonts-->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet" >
+    <title>Edifice CMS - Increase Your Productivity</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!--Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!--AOS Animation CSS -->
+    <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!--Owl Carousel CSS -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
-    <!-- Style CSS -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
-    <header class="container-fluid header">
-        <div class="navbar navbar-expand-md text-white sticky-top py-3 z-3  container-lg">
-
-            <a class="navbar-brand text-white" href="/">
-                <img src="Images/logo-company.png" alt="Company Logo" class="logo">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container-lg">
+            <a class="navbar-brand" href="#" data-aos="fade-right">
+                <img src="Images/logo-company.png" alt="Edifice CMS" class="logo">
             </a>
 
-
-            <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon "><i class="fa-solid fa-bars"></i></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
             </button>
 
-
-            <div class="collapse navbar-collapse" id="navbarMenu">
-                <ul class="navbar-nav mx-auto gap-3 fw-semibold text-md-center">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="/">Home</a>
+                        <a class="nav-link active" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-offWhite hover-text-success" href="/">About Us</a>
+                        <a class="nav-link" href="#about">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-offWhite hover-text-success" href="/">Services</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-offWhite hover-text-success" href="/">Projects</a>
+                        <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-offWhite hover-text-success" href="/">Contact Us</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
-                <div class="d-lg-block d-none ms-lg-3">
-                    <button class="btn btn-outline-light highlightbtnColor">Contact Us</button>
-                </div>
-
+                <button class="btn btn-primary cta-btn" data-aos="fade-left">
+                    Get Started
+                </button>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- hero section -->
-    <section class="hero-section text-white section">
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg-elements">
+            <div class="floating-element element-1"></div>
+            <div class="floating-element element-2"></div>
+            <div class="floating-element element-3"></div>
+        </div>
+        
         <div class="container-lg">
-            <div class="row align-items-center">
-
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <h1 class="display-5 fw-bold">
-                        We're here to <span class="txt-primary">Increase Your Productivity</span>
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                        We're here to <span class="text-primary">Increase your Productivity</span>
                     </h1>
-                    <p class="fs-5 mt-3" data-aos="fade-down-right">
-                        We are a forward-thinking design studio, tailored to the needs of the new generation. Our focus
-                        is on delivering innovative design solutions.
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        We are a forward-thinking design studio, tailored to the needs of the new generation. Our focus is on delivering innovative design solutions.
                     </p>
-
-                    <div class="d-flex align-items-center mt-4 flex-wrap position-relative">
-
-                        <button
-                            class="btn btn-outline-light d-flex align-items-center highlightbgColor order-1 order-md-0">
-                            <span class="fw-bold highlightBtnText">Get a free consultation Today</span>
-                            <span class="ms-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" width="18"
-                                    class="arrow-pulse" height="18">
-                                    <path
-                                        d="M6.6 10.8C8 13.9 10.1 16 13.2 17.4l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.5.6.6 0 1 .4 1 1v3.6c0 .6-.4 1-1 1C10.3 21.9 2.1 13.7 2.1 3c0-.6.4-1 1-1H6.7c.6 0 1 .4 1 1 0 1.1.2 2.3.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8z" />
-                                </svg>
-                            </span>
+                    
+                    <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+                        <button class="btn btn-primary btn-lg cta-button">
+                            <span>Get a free consultation today</span>
+                            <i class="fas fa-phone ms-2"></i>
                         </button>
-                        <img src="SVG/banner/Sec-1-light-lime-curve-arrow.svg.svg" alt="arrow"
-                            class="position-absolute top-0 end-0 me-2 mt-2 arrow-float order-0 order-md-1 img-fluid arrow">
-                    </div>
-                </div>
-
-
-                <div class="col-lg-6 text-center" data-aos="zoom-out-left" data-aos-easing="ease-out-cubic">
-                    <img src="Images/Hero Img.png" alt="Hero Image" class="img-fluid floating-img heroImg">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container-lg section">
-        <div class="position-relative mb-4">
-            <img src="SVG/Section 2/scribble.svg" alt="scribble" class="thumb">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2 class="fw-bold headingTwo" data-aos="fade-up" data-aos-duration="3000">
-                        We Aim To Bridge The Gap Between Business And The Digital World
-                        <span class="fs-1 align-middle primaryColor ele-spin">*</span>
-                    </h2>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row align-items-stretch mt-3 g-4">
-            <div class="col-md-6" data-aos="fade-right" data-aos-duration="2000">
-                <img src="Images/Team Img 1.png" alt="About Image"
-                    class="img-fluid rounded-3 w-100 h-100 object-fit-cover">
-            </div>
-
-
-            <div class="col-md-6 d-flex flex-column gap-4 overflow-auto my-auto" id="BusinessCard">
-
-                <div class="card border border-light  text-start" data-aos="fade-left" data-aos-offset="100"
-                    data-aos-duration="300">
-                    <div class="card-body d-flex gap-3">
-                        <img src="SVG/Section 2/Product Design Icon.svg" alt="Product Design Icon"
-                            class="mt-1 ele-flip-horizontal businessImg">
-                        <div class="flex-column align-items-start text-center">
-                            <h5 class="card-title mb-1">Product Design</h5>
-                            <p class="card-text text-gray mb-3">Learn design process with best in class theory</p>
-                            <a href="#" class="text-dark ">Read More</a>
+                        <div class="hero-arrow">
+                            <img src="SVG/banner/Sec-1-light-lime-curve-arrow.svg.svg" alt="Arrow" class="arrow-decoration">
                         </div>
                     </div>
                 </div>
-                <div class="card border border-light  text-start" data-aos="fade-left" data-aos-offset="100"
-                    data-aos-duration="600">
-                    <div class="card-body d-flex gap-3">
-                        <img src="SVG/Section 2/Marketing Strategy.svg" alt="Marketing Strategy Icon"
-                            class="mt-1 ele-flip-horizontal businessImg">
-                        <div class="flex-column align-items-start text-center">
-                            <h5 class="card-title mb-1">Marketing Strategy</h5>
-                            <p class="card-text text-gray mb-3">Discover new paths to promote your product</p>
-                            <a href="#" class="text-dark ">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card border border-light  text-start" data-aos="fade-left" data-aos-offset="100"
-                    data-aos-duration="900">
-                    <div class="card-body d-flex gap-3">
-                        <img src="SVG/Section 2/E-Commerce Icon.svg" alt="E-Commerce Icon"
-                            class="mt-1 ele-flip-horizontal businessImg">
-                        <div class="flex-column align-items-start text-center">
-                            <h5 class="card-title mb-1">E-Commerce</h5>
-                            <p class="card-text text-gray mb-3">Modernize & scale product catalogues to sell online</p>
-                            <a href="#" class="text-dark ">Read More</a>
+                
+                <div class="col-lg-6 hero-image" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="hero-image-container">
+                        <img src="Images/Hero Img.png" alt="Hero" class="img-fluid hero-main-img">
+                        <div class="floating-cards">
+                            <div class="stat-card card-1" data-aos="fade-left" data-aos-delay="600">
+                                <div class="stat-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h4>150%</h4>
+                                    <p>Growth Rate</p>
+                                </div>
+                            </div>
+                            <div class="stat-card card-2" data-aos="fade-right" data-aos-delay="800">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <h4>500+</h4>
+                                    <p>Happy Clients</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -178,198 +121,230 @@
         </div>
     </section>
 
-    <section class="section">
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
         <div class="container-lg">
-            <div class="row align-items-stretch g-4">
-                <div class="col-md-6 my-auto">
-                    <h2 class="fw-bold mb-4 text-start">
-                        About Benefits gets from CMS
-                        <span class="txt-primary fs-1 align-middle ele-spin">*</span>
-                    </h2>
-                    <div class="d-flex flex-column gap-3 listItem">
-                        <div class="d-flex align-items-start gap-3" data-aos="fade-right" data-aos-offset="100"
-                            data-aos-duration="300">
-                            <span class="text-dark wiggleArrow">✔</span>
-                            <p class="text-gray mb-0">Expert Brand consultation to maximize project.</p>
-                        </div>
-                        <div class="d-flex align-items-start gap-3" data-aos="fade-right" data-aos-offset="100"
-                            data-aos-duration="600">
-                            <span class="text-dark wiggleArrow">✔</span>
-                            <p class="text-gray mb-0">Build a strong online brand presence.</p>
-                        </div>
-                        <div class="d-flex align-items-start gap-3" data-aos="fade-right" data-aos-offset="100"
-                            data-aos-duration="900">
-                            <span class="text-dark wiggleArrow">✔</span>
-                            <p class="text-gray mb-0">Years of experience delivering successful projects.</p>
-                        </div>
-                        <div class="d-flex align-items-start gap-3" data-aos="fade-right" data-aos-offset="100"
-                            data-aos-duration="1200">
-                            <span class="text-dark wiggleArrow">✔</span>
-                            <p class="text-gray mb-0">We prioritize your needs to deliver tailored solutions.</p>
-                        </div>
-                        <div class="d-flex align-items-start gap-3" data-aos="fade-right" data-aos-offset="100"
-                            data-aos-duration="500">
-                            <span class="text-dark wiggleArrow">✔</span>
-                            <p class="text-gray mb-0">We prioritize your needs to deliver tailored solutions.</p>
-                        </div>
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up">
+                    We Aim To Bridge The Gap Between Business And The Digital World
+                    <span class="text-primary">*</span>
+                </h2>
+                <div class="section-decoration">
+                    <img src="SVG/Section 2/scribble.svg" alt="Decoration" class="decoration-img">
+                </div>
+            </div>
+
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-image-container">
+                        <img src="Images/Team Img 1.png" alt="Team" class="img-fluid rounded-4 shadow-lg">
+                        <div class="image-overlay"></div>
                     </div>
                 </div>
 
-                <div class="col-md-6">
-                    <img src="Images/About us Image.png" alt="Our Approach Image"
-                        class="img-fluid rounded-3 w-100 h-100 object-fit-cover">
+                <div class="col-lg-6">
+                    <div class="services-grid">
+                        <div class="service-card" data-aos="fade-left" data-aos-delay="100">
+                            <div class="service-icon">
+                                <img src="SVG/Section 2/Product Design Icon.svg" alt="Product Design">
+                            </div>
+                            <div class="service-content">
+                                <h5>Product Design</h5>
+                                <p>Learn design process with best in class theory</p>
+                                <a href="#" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="service-card" data-aos="fade-left" data-aos-delay="200">
+                            <div class="service-icon">
+                                <img src="SVG/Section 2/Marketing Strategy.svg" alt="Marketing Strategy">
+                            </div>
+                            <div class="service-content">
+                                <h5>Marketing Strategy</h5>
+                                <p>Discover new paths to promote your product</p>
+                                <a href="#" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="service-card" data-aos="fade-left" data-aos-delay="300">
+                            <div class="service-icon">
+                                <img src="SVG/Section 2/E-Commerce Icon.svg" alt="E-Commerce">
+                            </div>
+                            <div class="service-content">
+                                <h5>E-Commerce</h5>
+                                <p>Modernize & scale product catalogues to sell online</p>
+                                <a href="#" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="background-dark text-white section text-center">
-        <div class="container-lg">
-            <div class="row">
-                <div class="col-md-12 ">
-                    <h2 class="fw-bold txt-primary ">
-                        We Handle A Diverse Array Of Creative Projects
-                        <span class="txt-primary fs-1 align-middle ele-spin">*</span>
-                    </h2>
-                </div>
-                <div class="col-md-12">
-                    <div class="owl-carousel" id="projectsSection">
-                        <div class="item">
-                            <div class="card">
-                                <div class="face face1">
-                                    <div class="content">
-                                        <div class="imgIcon">
-                                            <img src="Images/Product Design Img.png" class="card-img-top"
-                                                alt="Product Design">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="face face2">
-                                    <div class="content">
-                                        <h3 class="txt-primary mb-2">
-                                            <a href="#" target="_blank">Product Design</a>
-                                        </h3>
-                                        <p>Modern approach to UI/UX and product thinking</p>
-                                        <a href="#" class="text-dark fw-medium text-decoration-none">
-                                            Know more →
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="card">
-                                <div class="face face1">
-                                    <div class="content">
-                                        <div class="imgIcon">
-                                            <img src="Images/Logo and Branding Img.png" class="card-img-top"
-                                                alt="Product Design">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="face face2">
-                                    <div class="content">
-                                        <h3 class="txt-primary mb-2">
-                                            <a href="#" target="_blank">Logo & Branding</a>
-                                        </h3>
-                                        <p>Deliver strong visuals & memorable identity</p>
-                                        <a href="#" class="text-dark fw-medium text-decoration-none">
-                                            Know more →
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="card">
-                                <div class="face face1">
-                                    <div class="content">
-                                        <div class="imgIcon">
-                                            <img src="Images/Product Design Img.png" class="card-img-top"
-                                                alt="App UI/UX Design">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="face face2">
-                                    <div class="content">
-                                        <h3 class="txt-primary mb-2">
-                                            <a href="#" target="_blank">App UI/UX Design</a>
-                                        </h3>
-                                        <p>Design intuitive mobile experiences</p>
-                                        <a href="#" class="text-dark fw-medium text-decoration-none">
-                                            Know more →
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <!-- FAQ Section  -->
-    <section class="section">
+    <!-- Benefits Section -->
+    <section class="benefits-section section-padding bg-light">
         <div class="container-lg">
             <div class="row align-items-center g-5">
-                <div class="col-md-6" data-aos="zoom-out-right" data-aos-easing="ease-out-cubic"
-                    data-aos-duration="2000">
-                    <div class="position-relative mx-auto faqImg">
-
-
-                        <img src="Images/img-2-BKIPDfMO.jpg.png" alt="FAQ Image 1"
-                            class="img-fluid rounded shadow-lg w-100">
-
-
-                        <img src="Images/img-3-D9WM4-oN.jpg.png" alt="FAQ Image 2"
-                            class="position-absolute rounded shadow border border-white faqImg2">
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4" data-aos="fade-right">
+                        About Benefits get from CMS
+                        <span class="text-primary">*</span>
+                    </h2>
+                    
+                    <div class="benefits-list">
+                        <div class="benefit-item" data-aos="fade-right" data-aos-delay="100">
+                            <div class="benefit-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p>Expert Brand consultation to maximize project</p>
+                        </div>
+                        
+                        <div class="benefit-item" data-aos="fade-right" data-aos-delay="200">
+                            <div class="benefit-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p>Build a strong online brand presence</p>
+                        </div>
+                        
+                        <div class="benefit-item" data-aos="fade-right" data-aos-delay="300">
+                            <div class="benefit-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p>Years of experience delivering successful projects</p>
+                        </div>
+                        
+                        <div class="benefit-item" data-aos="fade-right" data-aos-delay="400">
+                            <div class="benefit-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p>We prioritize your needs to deliver tailored solutions</p>
+                        </div>
+                        
+                        <div class="benefit-item" data-aos="fade-right" data-aos-delay="500">
+                            <div class="benefit-check">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <p>Comprehensive support and maintenance</p>
+                        </div>
                     </div>
                 </div>
 
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="benefits-image-container">
+                        <img src="Images/About us Image.png" alt="Benefits" class="img-fluid rounded-4 shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section section-padding bg-dark text-white">
+        <div class="container-lg">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title text-primary" data-aos="fade-up">
+                    We Handle A Diverse Array Of Creative Projects
+                    <span class="text-primary">*</span>
+                </h2>
+            </div>
 
-                <div class="col-md-6 bg-white rounded shadow border p-4">
-                    <h2 class="fw-bold text-dark mb-4 heading2">Frequently Asked Questions? <span
-                            class="txt-primary fs-1 align-middle ele-spin">*</span></h2>
-                    <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item ">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed faqbtn " type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            <div class="projects-carousel owl-carousel" id="projectsCarousel">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Images/Product Design Img.png" alt="Product Design" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-content">
+                                <h4 class="text-primary">Product Design</h4>
+                                <p>Modern approach to UI/UX and product thinking</p>
+                                <a href="#" class="project-link">Know more <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Images/Logo and Branding Img.png" alt="Logo & Branding" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-content">
+                                <h4 class="text-primary">Logo & Branding</h4>
+                                <p>Deliver strong visuals & memorable identity</p>
+                                <a href="#" class="project-link">Know more <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="Images/Product Design Img.png" alt="App UI/UX Design" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-content">
+                                <h4 class="text-primary">App UI/UX Design</h4>
+                                <p>Design intuitive mobile experiences</p>
+                                <a href="#" class="project-link">Know more <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section section-padding">
+        <div class="container-lg">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="faq-images">
+                        <img src="Images/img-2-BKIPDfMO.jpg.png" alt="FAQ" class="img-fluid rounded-4 shadow-lg main-faq-img">
+                        <img src="Images/img-3-D9WM4-oN.jpg.png" alt="FAQ" class="img-fluid rounded-4 shadow-lg secondary-faq-img">
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4" data-aos="fade-left">
+                        Frequently Asked Questions?
+                        <span class="text-primary">*</span>
+                    </h2>
+
+                    <div class="accordion custom-accordion" id="faqAccordion">
+                        <div class="accordion-item" data-aos="fade-left" data-aos-delay="100">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
                                     How Can Digital Marketing Benefit My Business?
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-gray faqDes">
-                                    It can increase brand visibility, drive web traffic, generate leads, and ultimately
-                                    boost sales and revenue.
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    It can increase brand visibility, drive web traffic, generate leads, and ultimately boost sales and revenue.
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed faqbtn" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+
+                        <div class="accordion-item" data-aos="fade-left" data-aos-delay="200">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
                                     Do I Need To Have A Large Budget For Digital Marketing?
                                 </button>
                             </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-gray faqDes">
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
                                     Not necessarily. We tailor plans to meet your budget and goals.
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed faqbtn" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseThree">
+
+                        <div class="accordion-item" data-aos="fade-left" data-aos-delay="300">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
                                     Unique And Influential Design
                                 </button>
                             </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-gray faqDes">
-                                    Our design team focuses on unique, impactful visuals.
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our design team focuses on unique, impactful visuals that make your brand stand out.
                                 </div>
                             </div>
                         </div>
@@ -380,313 +355,203 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="bg-light section text-center">
+    <section class="testimonials-section section-padding bg-light">
         <div class="container-lg">
-            <div class="position-relative mb-4">
-                <img src="SVG/Section 6/scribble final version-27.svg" alt="Decoration" class="thumb arrow-pulse icon">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2 class="fw-bold headingTwo" data-aos="fade-up" data-aos-duration="3000">
-                            Happy Words From Our Customer
-                            <span class="fs-1 align-middle primaryColor ele-spin">*</span>
-                        </h2>
-                    </div>
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up">
+                    Happy Words From Our Customer
+                    <span class="text-primary">*</span>
+                </h2>
+                <div class="section-decoration">
+                    <img src="SVG/Section 6/scribble final version-27.svg" alt="Decoration" class="decoration-img">
                 </div>
             </div>
 
-
-
-            <div class="d-flex justify-content-end mb-4">
-                <img src="SVG/Section 6/Sparkle.svg" alt="Decoration" class="arrow-float icon">
-            </div>
-            <div class="row g-4">
-                <div class="owl-carousel" id="feedbackSection">
-                    <div class="card">
-                        <div class="bg-neon p-4 rounded shadow border text-center feedCard">
-                            <div class="mb-3 txt-primary">
-                                ★ ★ ★ ★ ★
-                            </div>
-                            <h5 class="fw-semibold text-white">Exceptional Service!</h5>
-                            <p class="text-ccc small">"Exceptional service! Professional, creative and timely!"</p>
-                            <div class="d-flex align-items-center gap-3 mt-3">
-                                <img src="Images/Profile.png" class="rounded-circle feedbackpp">
-                                <div>
-                                    <h6 class="fw-semibold mb-0 text-white">Wade Warren</h6>
-                                    <small class="text-ccc">USA, California</small>
-                                </div>
-                            </div>
-                        </div>
+            <div class="testimonials-carousel owl-carousel" id="testimonialsCarousel">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-
-                    <div class="card">
-                        <div class="bg-neon p-4 rounded shadow border text-center feedCard">
-                            <div class="mb-3 txt-primary">
-                                ★ ★ ★ ★ ★
-                            </div>
-                            <h5 class="fw-semibold text-white">Exceptional Service!</h5>
-                            <p class="text-ccc small">"Extremely satisfied with the final product! Highly
-                                recommended."
-                            </p>
-                            <div class="d-flex align-items-center gap-3 mt-3">
-                                <img src="Images/Profile.png" class="rounded-circle feedbackpp">
-                                <div>
-                                    <h6 class="fw-semibold mb-0 text-white">Wade Warren</h6>
-                                    <small class="text-ccc">USA, California</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="bg-neon p-4 rounded shadow border text-center feedCard">
-                            <div class="mb-3 txt-primary">
-                                ★ ★ ★ ★ ★
-                            </div>
-                            <h5 class="fw-semibold text-white">Exceptional Service!</h5>
-                            <p class="text-ccc small">"Very helpful and quick to respond. Great work overall!"</p>
-                            <div class="d-flex align-items-center gap-3 mt-3">
-                                <img src="Images/Profile.png" class="rounded-circle feedbackpp">
-                                <div>
-                                    <h6 class="fw-semibold mb-0 text-white">Wade Warren</h6>
-                                    <small class="text-ccc">USA, California</small>
-                                </div>
-                            </div>
+                    <h5>Exceptional Service!</h5>
+                    <p>"Exceptional service! Professional, creative and timely!"</p>
+                    <div class="testimonial-author">
+                        <img src="Images/Profile.png" alt="Wade Warren" class="author-img">
+                        <div class="author-info">
+                            <h6>Wade Warren</h6>
+                            <small>USA, California</small>
                         </div>
                     </div>
                 </div>
 
-            </div>
-            <div class="d-flex justify-content-end mt-4">
-                <img src="SVG/Section 6/scribble final version-27.svg" alt="Decoration" class="arrow-pulse icon">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h5>Outstanding Results!</h5>
+                    <p>"Extremely satisfied with the final product! Highly recommended."</p>
+                    <div class="testimonial-author">
+                        <img src="Images/Profile.png" alt="Jane Smith" class="author-img">
+                        <div class="author-info">
+                            <h6>Jane Smith</h6>
+                            <small>UK, London</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h5>Great Experience!</h5>
+                    <p>"Very helpful and quick to respond. Great work overall!"</p>
+                    <div class="testimonial-author">
+                        <img src="Images/Profile.png" alt="John Doe" class="author-img">
+                        <div class="author-info">
+                            <h6>John Doe</h6>
+                            <small>Canada, Toronto</small>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Blog Section -->
-    <section class="section text-center container-lg">
-
-        <div class="row">
-            <div class="col-md-12" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="fw-bold mb-4">Our Latest News & Blogs <span
-                        class="txt-primary fs-1 align-middle ele-spin">*</span>
+    <section class="blog-section section-padding">
+        <div class="container-lg">
+            <div class="section-header text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up">
+                    Our Latest News & Blogs
+                    <span class="text-primary">*</span>
                 </h2>
             </div>
-        </div>
 
-        <div class="row mt-2 g-4">
-            <div class="owl-carousel" id="blogSection">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="Images/Blog Img 1.png" class="img-fluid w-100 h-100" alt="Blog 1">
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="p-4 d-flex flex-column justify-content-center h-100">
-                                <h5 class="fw-semibold mb-2">Wins 2023 Good Design London Award</h5>
-                                <a href="#" class="text-light text-decoration-none">
-                                    Read More <span class="fs-5">&rarr;</span>
-                                </a>
+            <div class="blog-carousel owl-carousel" id="blogCarousel">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="Images/Blog Img 1.png" alt="Blog 1" class="img-fluid">
+                        <div class="blog-overlay">
+                            <div class="blog-content">
+                                <h5>Wins 2023 Good Design London Award</h5>
+                                <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
-
-                    </div>
-                </div>
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="Images/Blog Img 2.png" class="img-fluid w-100 h-100" alt="Blog 1">
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="p-4 d-flex flex-column justify-content-center h-100">
-                                <h5 class="fw-semibold mb-2">How We Improved Conversion by 30%</h5>
-                                <a href="#" class="text-light text-decoration-none">
-                                    Read More <span class="fs-5">&rarr;</span>
-                                </a>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
 
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="Images/Blog Img 3.png" class="img-fluid w-100 h-100" alt="Blog 1">
-                        </div>
-                        <div class="flip-card-back">
-                            <div class="p-4 d-flex flex-column justify-content-center h-100">
-                                <h5 class="fw-semibold mb-2">Behind the Scenes of a Branding Project</h5>
-                                <a href="#" class="text-light text-decoration-none">
-                                    Read More <span class="fs-5">&rarr;</span>
-                                </a>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="Images/Blog Img 2.png" alt="Blog 2" class="img-fluid">
+                        <div class="blog-overlay">
+                            <div class="blog-content">
+                                <h5>How We Improved Conversion by 30%</h5>
+                                <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="Images/Blog Img 3.png" alt="Blog 3" class="img-fluid">
+                        <div class="blog-overlay">
+                            <div class="blog-content">
+                                <h5>Behind the Scenes of a Branding Project</h5>
+                                <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
-
     </section>
 
-    <footer class="footer section container-fluid">
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding bg-dark text-white">
         <div class="container-lg">
-            <div class="row g-4 align-items-start">
-
-                <div class="col-md-6">
-                    <h2 class="fw-bold mb-3 text-light">
-                        Let's start a <br><span>project together</span>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h2 class="section-title mb-4" data-aos="fade-right">
+                        Let's start a <br><span class="text-primary">project together</span>
                     </h2>
-                    <p>
-                        <span class=" highlight">Give us a call:</span><br>
-                        <strong class="text-light">
-                            <a href="tel:1234567890" class="text-light text-decoration-none">(123) 456-7890</a>
-                        </strong>
+                    
+                    <div class="contact-info mb-4">
+                        <div class="contact-item" data-aos="fade-right" data-aos-delay="100">
+                            <span class="text-primary">Give us a call:</span><br>
+                            <strong><a href="tel:1234567890" class="text-white text-decoration-none">(123) 456-7890</a></strong>
+                        </div>
+                        
+                        <div class="contact-item mt-3" data-aos="fade-right" data-aos-delay="200">
+                            <span class="text-primary">Send us an email:</span><br>
+                            <strong><a href="mailto:edificecms@gmail.com" class="text-white text-decoration-none">edificecms@gmail.com</a></strong>
+                        </div>
+                    </div>
 
-                    </p>
-                    <p class="mt-2">
-                        <span class=" highlight ">Send us an email:</span><br>
-                        <strong class="text-light"> <a href="mailto:edificecms@gmail.com"
-                                class="text-light text-decoration-none">edificecms@gmail.com</a></strong>
-                    </p>
-
-
-                    <div class="mt-4 d-flex gap-3">
-
-                        <a href="#"
-                            class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center p-0 socialIcons"
-                            style="width: 40px; height: 40px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                class="bi bi-globe" viewBox="0 0 16 16">
-                                <path
-                                    d="M0 8a8 8 0 1 0 16 0A8 8 0 0 0 0 8zm1.017 0a6.983 6.983 0 0 1 1.313-4.03c.346.366.7.813 1.05 1.34C4.19 6.288 4.5 7.095 4.5 8c0 .905-.31 1.712-.88 2.69-.35.527-.704.974-1.05 1.34A6.983 6.983 0 0 1 1.017 8zM5.5 8c0-1.07-.38-2.023-.97-2.905-.32-.48-.653-.894-.97-1.26A6.979 6.979 0 0 1 8 1.018a6.979 6.979 0 0 1 4.44 2.817c-.318.366-.65.78-.97 1.26-.59.882-.97 1.836-.97 2.905 0 1.07.38 2.023.97 2.905.32.48.653.894.97 1.26A6.979 6.979 0 0 1 8 14.982a6.979 6.979 0 0 1-4.44-2.817c.318-.366.65-.78.97-1.26.59-.882.97-1.836.97-2.905zm6.463 2.69c-.346-.366-.7-.813-1.05-1.34C11.81 9.712 11.5 8.905 11.5 8c0-.905.31-1.712.88-2.69.35-.527.704-.974 1.05-1.34A6.983 6.983 0 0 1 14.983 8a6.983 6.983 0 0 1-1.313 4.03z" />
-                            </svg>
-                        </a>
-
-
-                        <a href="#"
-                            class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center p-0 socialIcons">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                class="bi bi-facebook" viewBox="0 0 16 16">
-                                <path
-                                    d="M8.94 8.5h1.293l.202-1.5H8.94V6.294c0-.434.084-.726.74-.726H10.5V4.185C10.275 4.145 9.69 4 9.093 4c-1.275 0-2.153.726-2.153 2.06v1.44H5.25v1.5h1.69V13h2V8.5z" />
-                            </svg>
-                        </a>
-
-                        <a href="#"
-                            class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center p-0 socialIcons"
-                            style="width: 40px; height: 40px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
-                            </svg>
-                        </a>
-
-
-                        <a href="#"
-                            class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center p-0 socialIcons"
-                            style="width: 40px; height: 40px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                class="bi bi-person" viewBox="0 0 16 16">
-                                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                <path fill-rule="evenodd"
-                                    d="M8 9a5 5 0 0 0-5 5v.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V14a5 5 0 0 0-5-5z" />
-                            </svg>
-                        </a>
+                    <div class="social-links" data-aos="fade-right" data-aos-delay="300">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
 
-
-                <div class="col-md-6">
-                    <h3 class="fw-semibold mb-3 text-light heading3">Send a Message</h3>
-                    <form class="row g-3">
-                        <div class="col-12">
-                            <input type="text" required
-                                class="form-control p-3 rounded-pill background-dark text-white border-light"
-                                placeholder="Your name">
+                <div class="col-lg-6">
+                    <h3 class="mb-4" data-aos="fade-left">Send a Message</h3>
+                    <form class="contact-form" data-aos="fade-left" data-aos-delay="100">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your name" required>
                         </div>
-                        <div class="col-12">
-                            <input type="email" required pattern="[^ @]*@[^ @]*" maxlength="70"
-                                class="form-control p-3 rounded-pill background-dark text-white border-light"
-                                placeholder="Your email address">
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your email address" required>
                         </div>
-                        <div class="col-12">
-                            <input type="text" required minlength="10" maxlength="12"
-                                class="form-control p-3  rounded-pill background-dark text-white border-light"
-                                placeholder="Your phone number">
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" placeholder="Your phone number" required>
                         </div>
-                        <div class="col-12">
-                            <textarea rows="4" required
-                                class="form-control p-3 textarea background-dark text-white border-light"
-                                placeholder="Type any message"></textarea>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Type any message" required></textarea>
                         </div>
-                        <div class="col-12 d-flex align-items-center">
-                            <button type="submit"
-                                class="btn btn-outline-light d-flex justify-content-between align-items-center submitBtn highlightbtnColor px-4"
-                                style="min-width: 200px;">
-                                <span>Send message</span>
-                                <span
-                                    class="bg-white text-success rounded-circle d-flex align-items-center justify-content-center ms-3 socialIcons"
-                                    style="width: 36px; height: 36px;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
-                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" viewBox="0 0 24 24">
-                                        <path d="M5 12h14M13 5l7 7-7 7" />
-                                    </svg>
-                                </span>
-                            </button>
-
-                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">
+                            <span>Send message</span>
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </button>
                     </form>
                 </div>
             </div>
-            <hr class="bg-light">
-            <div class="row footerConatiner">
-                <div class="col-md-6 text-start">
-                    <a href="/">
-                        <img src="Images/logo-company.png" alt="Company Logo" class="h-10 img-fluid">
-                    </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container-lg">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="Images/logo-company.png" alt="Edifice CMS" class="footer-logo">
                 </div>
-                <div class="col-md-6 text-end mt-3 mt-md-0">
-                    <p class="text-gray">
-                        &copy; 2024, All Rights Reserved by edifice CMS
-                    </p>
+                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                    <p class="mb-0 text-muted">&copy; 2024, All Rights Reserved by Edifice CMS</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- jQuery-->
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!--Owl Carousel-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <!--Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <!--AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script>
-        AOS.init();
-        $('#blogSection,#feedbackSection,#projectsSection').owlCarousel({
-            margin: 20,
-            nav: false,
-            dots: true,
-            loop: false,
-            autoplay: false,
-            autoplayTimeout: 1500,
-            autoplayHoverPause: true,
-            smartSpeed: 800,
-            responsive: {
-                0: { items: 1 },
-                768: { items: 2 },
-                992: { items: 3 }
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
