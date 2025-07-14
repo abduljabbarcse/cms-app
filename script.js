@@ -7,7 +7,7 @@ AOS.init({
 });
 
 // Navbar scroll effect
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const navbar = document.getElementById('mainNav');
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
@@ -32,10 +32,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Active navigation link highlighting
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    
+
     let current = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
@@ -57,38 +57,38 @@ window.addEventListener('scroll', function() {
 function createMiniChart() {
     const canvas = document.querySelector('.mini-chart');
     if (!canvas) return;
-    
+
     const ctx = canvas.getContext('2d');
     const width = canvas.width = 80;
     const height = canvas.height = 60;
-    
+
     // Create a simple line chart
     const data = [20, 35, 25, 45, 30, 50, 40];
     const maxValue = Math.max(...data);
-    
+
     ctx.strokeStyle = '#b6ff00';
     ctx.lineWidth = 2;
     ctx.beginPath();
-    
+
     data.forEach((value, index) => {
         const x = (index / (data.length - 1)) * width;
         const y = height - (value / maxValue) * height;
-        
+
         if (index === 0) {
             ctx.moveTo(x, y);
         } else {
             ctx.lineTo(x, y);
         }
     });
-    
+
     ctx.stroke();
-    
+
     // Add dots
     ctx.fillStyle = '#b6ff00';
     data.forEach((value, index) => {
         const x = (index / (data.length - 1)) * width;
         const y = height - (value / maxValue) * height;
-        
+
         ctx.beginPath();
         ctx.arc(x, y, 2, 0, 2 * Math.PI);
         ctx.fill();
@@ -106,42 +106,42 @@ function animateBars() {
 }
 
 // Form submission handling
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
+document.querySelector('.contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    
+
     // Get form data
     const name = this.querySelector('input[type="text"]').value;
     const email = this.querySelector('input[type="email"]').value;
     const phone = this.querySelector('input[type="tel"]').value;
     const message = this.querySelector('textarea').value;
-    
+
     // Basic validation
     if (!name || !email || !phone || !message) {
         showNotification('Please fill in all fields', 'error');
         return;
     }
-    
+
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         showNotification('Please enter a valid email address', 'error');
         return;
     }
-    
+
     // Phone validation
     const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
     if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
         showNotification('Please enter a valid phone number', 'error');
         return;
     }
-    
+
     // Simulate form submission
     const submitBtn = this.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
-    
+
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
     submitBtn.disabled = true;
-    
+
     setTimeout(() => {
         showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
         this.reset();
@@ -155,7 +155,7 @@ function showNotification(message, type = 'info') {
     // Remove existing notifications
     const existingNotifications = document.querySelectorAll('.notification');
     existingNotifications.forEach(notification => notification.remove());
-    
+
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
@@ -168,7 +168,7 @@ function showNotification(message, type = 'info') {
             </button>
         </div>
     `;
-    
+
     // Add styles
     notification.style.cssText = `
         position: fixed;
@@ -184,14 +184,14 @@ function showNotification(message, type = 'info') {
         transform: translateX(100%);
         transition: transform 0.3s ease;
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     // Animate in
     setTimeout(() => {
         notification.style.transform = 'translateX(0)';
     }, 100);
-    
+
     // Auto remove after 5 seconds
     setTimeout(() => {
         if (notification.parentElement) {
@@ -202,10 +202,10 @@ function showNotification(message, type = 'info') {
 }
 
 // Parallax effect for floating elements
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const scrolled = window.pageYOffset;
     const parallaxElements = document.querySelectorAll('.floating-star, .floating-sparkle');
-    
+
     parallaxElements.forEach((element, index) => {
         const speed = 0.3 + (index * 0.1);
         const yPos = -(scrolled * speed);
@@ -228,7 +228,7 @@ const observer = new IntersectionObserver((entries) => {
                     animateBars();
                 }, 1000);
             }
-            
+
             // Add stagger animation to service cards
             if (entry.target.classList.contains('services-grid')) {
                 const cards = entry.target.querySelectorAll('.service-card');
@@ -238,7 +238,7 @@ const observer = new IntersectionObserver((entries) => {
                     }, index * 200);
                 });
             }
-            
+
             // Add stagger animation to benefit items
             if (entry.target.classList.contains('benefits-list')) {
                 const items = entry.target.querySelectorAll('.benefit-item');
@@ -258,22 +258,10 @@ sectionsToObserve.forEach(section => {
     observer.observe(section);
 });
 
-// Add loading animation
-window.addEventListener('load', function() {
-    document.body.classList.add('loaded');
-    
-    // Trigger hero animations
-    setTimeout(() => {
-        const heroTitle = document.querySelector('.hero-title');
-        if (heroTitle) {
-            heroTitle.style.animation = 'fadeInUp 1s ease-out forwards';
-        }
-    }, 500);
-});
 
 // Mobile menu close on link click
 document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-    link.addEventListener('click', function() {
+    link.addEventListener('click', function () {
         const navbarCollapse = document.querySelector('.navbar-collapse');
         if (navbarCollapse.classList.contains('show')) {
             const bsCollapse = new bootstrap.Collapse(navbarCollapse);
@@ -284,33 +272,33 @@ document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
 
 // Add hover effects to project cards
 document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
         this.style.transform = 'translateY(-10px) scale(1.02)';
     });
-    
-    card.addEventListener('mouseleave', function() {
+
+    card.addEventListener('mouseleave', function () {
         this.style.transform = 'translateY(0) scale(1)';
     });
 });
 
 // Add hover effects to testimonial cards
 document.querySelectorAll('.testimonial-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
         this.style.transform = 'translateY(-5px) scale(1.02)';
     });
-    
-    card.addEventListener('mouseleave', function() {
+
+    card.addEventListener('mouseleave', function () {
         this.style.transform = 'translateY(0) scale(1)';
     });
 });
 
 // Add hover effects to blog cards
 document.querySelectorAll('.blog-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
+    card.addEventListener('mouseenter', function () {
         this.style.transform = 'translateY(-5px) scale(1.02)';
     });
-    
-    card.addEventListener('mouseleave', function() {
+
+    card.addEventListener('mouseleave', function () {
         this.style.transform = 'translateY(0) scale(1)';
     });
 });
@@ -319,7 +307,7 @@ document.querySelectorAll('.blog-card').forEach(card => {
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.innerHTML = '';
-    
+
     function type() {
         if (i < text.length) {
             element.innerHTML += text.charAt(i);
@@ -327,20 +315,10 @@ function typeWriter(element, text, speed = 100) {
             setTimeout(type, speed);
         }
     }
-    
+
     type();
 }
 
-// Initialize typing effect on load
-window.addEventListener('load', function() {
-    setTimeout(() => {
-        const heroTitle = document.querySelector('.hero-title');
-        if (heroTitle) {
-            const originalText = heroTitle.innerHTML;
-            typeWriter(heroTitle, originalText.replace(/<[^>]*>/g, ''), 50);
-        }
-    }, 1000);
-});
 
 // Add CSS for additional animations
 const additionalStyles = document.createElement('style');
@@ -412,7 +390,7 @@ document.querySelectorAll('section').forEach(section => {
 });
 
 // Add interactive cursor effect
-document.addEventListener('mousemove', function(e) {
+document.addEventListener('mousemove', function (e) {
     const cursor = document.querySelector('.custom-cursor');
     if (!cursor) {
         const newCursor = document.createElement('div');
@@ -430,7 +408,7 @@ document.addEventListener('mousemove', function(e) {
         `;
         document.body.appendChild(newCursor);
     }
-    
+
     const cursorElement = document.querySelector('.custom-cursor');
     cursorElement.style.left = e.clientX - 10 + 'px';
     cursorElement.style.top = e.clientY - 10 + 'px';
@@ -438,14 +416,14 @@ document.addEventListener('mousemove', function(e) {
 
 // Add hover effects for interactive elements
 document.querySelectorAll('a, button, .service-card, .project-card, .testimonial-card, .blog-card').forEach(element => {
-    element.addEventListener('mouseenter', function() {
+    element.addEventListener('mouseenter', function () {
         const cursor = document.querySelector('.custom-cursor');
         if (cursor) {
             cursor.style.transform = 'scale(2)';
         }
     });
-    
-    element.addEventListener('mouseleave', function() {
+
+    element.addEventListener('mouseleave', function () {
         const cursor = document.querySelector('.custom-cursor');
         if (cursor) {
             cursor.style.transform = 'scale(1)';
@@ -454,7 +432,7 @@ document.querySelectorAll('a, button, .service-card, .project-card, .testimonial
 });
 
 // Initialize all animations and effects
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Add entrance animations to hero elements
     setTimeout(() => {
         const heroElements = document.querySelectorAll('.hero-content > *');
@@ -462,10 +440,128 @@ document.addEventListener('DOMContentLoaded', function() {
             element.style.animation = `fadeInUp 0.8s ease-out ${index * 0.2}s both`;
         });
     }, 500);
-    
+
     // Add floating animation to decorative elements
     const floatingElements = document.querySelectorAll('.floating-star, .floating-sparkle');
     floatingElements.forEach((element, index) => {
         element.style.animationDelay = `${index * 0.5}s`;
     });
+});
+$(document).ready(function () {
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,
+        dots: true,
+        responsive: {
+            0: { items: 1 },
+            768: { items: 2 },
+            992: { items: 3 }
+        }
+    });
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const contactForm = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
+
+    // Form validation
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Reset validation
+        const inputs = contactForm.querySelectorAll('.form-control');
+        inputs.forEach(input => {
+            input.classList.remove('is-invalid');
+        });
+
+        // Validate form
+        let isValid = true;
+
+        // Name validation
+        const nameInput = document.getElementById('name');
+        if (!nameInput.value.trim()) {
+            nameInput.classList.add('is-invalid');
+            isValid = false;
+        }
+
+        // Email validation
+        const emailInput = document.getElementById('email');
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailInput.value)) {
+            emailInput.classList.add('is-invalid');
+            isValid = false;
+        }
+
+        // Phone validation (basic)
+        const phoneInput = document.getElementById('phone');
+        const phoneRegex = /^[\d\s\-+()]{8,}$/;
+        if (!phoneRegex.test(phoneInput.value)) {
+            phoneInput.classList.add('is-invalid');
+            isValid = false;
+        }
+
+        // Message validation
+        const messageInput = document.getElementById('message');
+        if (!messageInput.value.trim()) {
+            messageInput.classList.add('is-invalid');
+            isValid = false;
+        }
+
+        if (!isValid) {
+            return;
+        }
+
+        // Form is valid - proceed with submission
+        submitForm();
+    });
+
+    function submitForm() {
+        const formData = new FormData(contactForm);
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+        // Disable button during submission
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Sending...</span>';
+
+        // Here you would typically make an AJAX request to your server
+        // This is a mock implementation - replace with actual API call
+        setTimeout(() => {
+            // Simulate successful submission (replace with actual fetch/AJAX call)
+            // fetch('your-api-endpoint', {
+            //     method: 'POST',
+            //     body: formData
+            // })
+            // .then(response => response.json())
+            // .then(data => {
+            //     showSuccess();
+            // })
+            // .catch(error => {
+            //     showError();
+            // });
+
+            // For demo purposes, we'll randomly succeed or fail
+            const isSuccess = Math.random() > 0.2; // 80% chance of success
+            isSuccess ? showSuccess() : showError();
+
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<span>Send message</span><div class="btn-arrow"><i class="fas fa-arrow-right"></i></div>';
+        }, 1500);
+    }
+
+    function showSuccess() {
+        successMessage.classList.remove('d-none');
+        errorMessage.classList.add('d-none');
+        contactForm.reset();
+
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+            successMessage.classList.add('d-none');
+        }, 5000);
+    }
+
+    function showError() {
+        errorMessage.classList.remove('d-none');
+        successMessage.classList.add('d-none');
+    }
 });
